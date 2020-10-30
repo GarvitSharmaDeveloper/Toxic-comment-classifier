@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Toxic Comments Classifier</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="static/style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+  </head>
+<body style="background-image: url('static/abstract-futuristic-background_-1.png'); ">
+
+  <header>
+    <nav id="header-nav" class="navbar navbar-default">
+      
+        <div class="navbar-header">
+
+          <!--<a href="index.html" class="pull-left">-->
+            
+            <a  href="index.html" >
+              <img src = "static/restaurant-logo.png"  id="logo"  width="5%">
+            </a>
+          
+          
+           <strong id="heading">Toxic Comments Classifier</strong>
+       
+          <a  href="index.html" >
+              <img src = "static/restaurant-logo.png"  id="logo2"  width="5%">
+            </a>
+        </div>
+
+
+       
+      
+    </nav><!-- #header-nav -->
+  </header>
+    <div id="main-content">
+      <div id="box1">
+        <form action="{{ url_for('predict')}}"method="post">
+            
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+                <input id='text' type="text" name="text" placeholder="  Enter your comment here" required="required" size="25" style="font-size:25px; border-radius: 20px;outline: none;height: 90px; width: 30%;"/>
+                <br>
+                <br>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            
+             <br>
+            <br>
+            <div id="box1" style="border-color: Black ">
+            <strong id="predict">{{ pred_tox }} <br><br>
+  {{ pred_sev }} <br><br>
+  {{ pred_obs }} <br><br>
+  {{ pred_ins }} <br><br>
+  {{ pred_thr }} <br><br>
+  {{ pred_ide }}</strong>
+           </form>
+        </div>
+      </div>
+      
+    </div>
+
+</body>
+</html>
+            
+            
+          
